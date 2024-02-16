@@ -14,7 +14,8 @@
             <h1>{{ $product['title'] }}</h1>
             <p>{{ $product['description'] }}</p>
             <div class="d-flex justify-content-between align-items-baseline">
-                <span class="display-5">{{ $product['price'] }} MAD</span>
+                {{-- <span class="display-5">{{ $product['price'] }} MAD</span> --}}
+                <x-price  :value="$product['price']"  />
                 <span @class([
                     'badge rounded-pill',
                     'text-bg-success' => $product['stock'] >= 10,

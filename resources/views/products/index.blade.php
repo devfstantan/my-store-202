@@ -14,7 +14,11 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ $p['title'] }}</h5>
                         <p class="card-text">{{ $p['description'] }}</p>
-                        <a href="{{route('products.show',['id' => $p['id']])}}" class="btn btn-primary">Voir plus</a>
+                        {{-- <a href="{{route('products.show',['id' => $p['id']])}}" class="btn btn-primary">Voir plus</a> --}}
+                        <x-button 
+                            :href="route('products.show',['id' => $p['id']])" 
+                            label="Voir plus"
+                        />
                     </div>
                 </div>
             </div>
